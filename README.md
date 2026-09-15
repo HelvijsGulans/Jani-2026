@@ -1,16 +1,73 @@
-# React + Vite
+# Jāņi 2026
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A responsive React website for a Latvian Midsummer celebration.
 
-Currently, two official plugins are available:
+This project is a modernized version of a personal event website I originally built in 2024. I revisited it in 2026 to improve the React structure, responsive layout, styling, localization, and user interactions.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+**Live demo:** https://jani-2026.vercel.app/
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Responsive desktop and mobile layout
+- English and Latvian language switching
+- Selected language persisted with `localStorage`
+- Sticky responsive navigation with a mobile hamburger menu
+- Interactive FAQ accordion
+- RSVP form with validation
+- RSVP data persisted locally between page refreshes
+- Smooth section navigation
+- Responsive image-based hero section
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- React
+- JavaScript
+- HTML
+- CSS
+- Vite
+- Vercel
+
+## Running Locally
+
+Clone the repository:
+
+```bash
+git clone https://github.com/HelvijsGulans/Jani-2026.git
+cd Jani-2026
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Create a production build:
+
+```bash
+npm run build
+```
+
+Preview the production build locally:
+
+```bash
+npm run preview
+```
+
+## Project Background
+
+The original version of this site was created in 2024 as a personal event invitation.
+
+In 2026, I rebuilt and modernized it with a focus on cleaner React component structure, responsive CSS, reusable translated content, state management, and a better experience across desktop and mobile devices.
+
+The visual direction intentionally keeps the nature-inspired character of the original project while replacing its fixed layouts and breakpoint-specific positioning with a more flexible responsive design.
+
+## Notes
+
+The RSVP form is a frontend demonstration and stores submitted data in the user's browser using `localStorage`. It does not send data to a backend or external service.
