@@ -24,7 +24,7 @@ const translations = {
         },
         {
         time: "19:00",
-        title: "Midsummer wreath workshop",
+        title: "Flower crown workshop",
         },
         {
         time: "20:00",
@@ -36,7 +36,7 @@ const translations = {
         },
         {
         time: "23:00",
-        title: "Bonfire lighting",
+        title: "Lighting the bonfire",
         },
         {
         time: "00:00",
