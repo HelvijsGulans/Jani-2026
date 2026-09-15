@@ -1,5 +1,5 @@
 import "./Hero.css";
-import heroImage from "./LaukuUpscaled.jpg"
+import heroImage from "./LaukuUpscaled.webp"
 
 export default function Hero({text}){
   return (

@@ -62,7 +62,7 @@ export default function RSVP({text}) {
     
 
   return (
-    <section className="app__rsvp_section" id="rsvp">
+    <section className="app__rsvp_section">
         <form id="rsvp" className="app__rsvp" onSubmit={handleSubmit}>
             <h2>{text.title}</h2>
             <div className="form-field">
