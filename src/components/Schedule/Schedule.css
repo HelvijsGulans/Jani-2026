@@ -1,0 +1,85 @@
+@font-face {
+  font-family: Carelia;
+  src: url(./Carelia-Upright.ttf);
+}
+
+.app__plan {
+  height: 110vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background: linear-gradient(
+    to bottom,
+    #2e4322 0%,
+    #2e4322 20%,
+    white 20%,
+    white 100%
+  );
+  background-image: url(./leaf\ background\ upscaled.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.app__plan_container {
+  text-align: left;
+  display: flex;
+  flex-direction: row;
+}
+
+.app__plan_seciba {
+  font-family: carelia;
+  font-size: 25px;
+}
+
+.app__plan_list_one,
+.app__plan_list_two {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+  justify-content: right;
+  list-style: none;
+  font-family: Carelia;
+  font-size: 22px;
+}
+
+.app__plan_title {
+  font-family: candace;
+  margin-top: 5rem;
+  font-size: 45px;
+}
+
+@media screen and (max-width: 1150px) {
+  .app__plan {
+    height: 50rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .app__plan {
+    margin-top: 1rem;
+    height: 60rem;
+    width: 100%;
+    background-color: white;
+    background-image: none;
+  }
+
+  .app__plan_container {
+    flex-direction: column;
+  }
+
+  .app__plan_seciba {
+    margin-top: -2rem;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .app__plan_seciba {
+    padding: 2rem;
+    margin-top: -3rem;
+    margin-bottom: 1rem;
+  }
+}

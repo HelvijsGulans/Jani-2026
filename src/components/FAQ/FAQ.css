@@ -1,0 +1,95 @@
+@font-face {
+  font-family: Carelia;
+  src: url(./Carelia-Upright.ttf);
+}
+
+.app__FAQ {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #2e4322;
+  justify-content: center;
+  height: 160vh;
+}
+
+.app__FAQ_title {
+  font-family: Carelia;
+  color: white;
+  padding: 30px;
+  margin-top: -7rem;
+  font-size: 45px;
+}
+
+.item {
+  background-color: rgb(255, 255, 255, 0.7);
+  width: 70%;
+  margin: 8px;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 15px;
+  font-family: carelia;
+  font-weight: 100;
+  font-size: 20px;
+}
+
+.item:hover {
+  background-color: rgb(255, 255, 255, 0.75);
+}
+
+.question {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 1s ease-in-out;
+}
+
+.answer.show {
+  height: auto;
+  max-height: 9999px;
+  transition: all 1s ease-in-out;
+}
+
+.plus {
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.app__FAQ_extraQ {
+  color: white;
+  font-family: carelia;
+  font-size: 38px;
+}
+
+@media screen and (max-width: 1150px) {
+  .app__FAQ {
+    height: 90rem;
+    padding: 20px;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .app__FAQ {
+    height: 102rem;
+    margin-left: -1rem;
+  }
+
+  .app__FAQ_title {
+    text-align: center;
+    font-size: 36px;
+    margin-top: -12rem;
+  }
+
+  .app__FAQ_extraQ {
+    text-align: center;
+    font-size: 32px;
+    padding: 1rem;
+  }
+}

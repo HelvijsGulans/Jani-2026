@@ -1,0 +1,105 @@
+@font-face {
+  font-family: Carelia;
+  src: url(C:\Users\yurgett\Downloads\Carelia-Upright.ttf);
+}
+
+.app__hello {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 70rem;
+  background: linear-gradient(
+    to bottom,
+    white 0%,
+    white 60%,
+    #2e4322 60%,
+    #2e4322 100%
+  );
+}
+
+.app__hello_main {
+  display: flex;
+  justify-content: center;
+
+  align-items: center;
+}
+
+.app__hello_laukubilde {
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 3;
+  border: 8px solid white;
+  width: 1200px;
+  height: 720px;
+}
+
+.app__hello_title {
+  margin-top: 2rem;
+  align-items: center;
+  justify-content: center;
+  font-size: 60px;
+  font-family: candice;
+}
+.app__hello_container {
+  font-family: carelia;
+  flex-direction: column;
+  display: flex;
+  margin-left: 40rem;
+  margin-right: 40rem;
+  height: 25rem;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+  background-color: rgb(255, 255, 255, 0.9);
+  position: absolute;
+  width: 50rem;
+  align-self: flex-start;
+  margin-top: 7rem;
+  border: 2px solid black;
+}
+.app__hello_card {
+  margin-left: 2rem;
+  margin-right: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin-top: -3rem;
+  font-size: 17px;
+}
+
+@media screen and (max-width: 1150px) {
+  .app__hello_laukubilde {
+    padding: 5px;
+    width: 90%;
+    height: 35rem;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .app__hello {
+    height: 70rem;
+    width: 100%;
+  }
+
+  .app__hello_laukubilde {
+    display: flex;
+    max-width: 80%;
+    height: auto;
+    margin-top: -30rem;
+  }
+
+  .app__hello_container {
+    display: flex;
+    width: 80%;
+    height: 35rem;
+    margin-top: -5rem;
+  }
+
+  .app__hello_card {
+    font-size: 15px;
+  }
+}

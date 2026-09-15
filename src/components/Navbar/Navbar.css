@@ -1,0 +1,78 @@
+@font-face {
+  font-family: Carelia;
+  src: url(C:\Users\yurgett\Downloads\Carelia-Upright.ttf);
+}
+
+.app__navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: -10rem;
+}
+
+.app__navbar_list {
+  font: candice;
+  flex: 1;
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: flex-end;
+  margin-right: 3rem;
+  cursor: pointer;
+}
+
+.app__navbar_list li a {
+  font-family: Carelia;
+  font-size: 24px;
+  text-decoration: none;
+  color: black;
+  margin: 0rem 4rem;
+}
+
+.app__navbar_title {
+  font-size: 28px;
+  margin-left: 3rem;
+  padding: 0rem 2rem;
+  font-family: Carelia;
+}
+
+@media screen and (max-width: 1150px) {
+  .app__navbar {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    height: 32px;
+  }
+
+  .app__navbar_title {
+    font-size: 45px;
+    margin-left: 25px;
+    padding-top: 80px;
+  }
+
+  .app__navbar_list {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .app__navbar {
+    height: 100px;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .app__navbar_list {
+    display: none;
+  }
+
+  .app__navbar_title {
+    font-size: 37px;
+    text-align: center;
+    margin-left: 0px;
+  }
+}

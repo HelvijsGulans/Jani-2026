@@ -1,17 +1,20 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import './App.css'
+import Navbar from "./components/Navbar/Navbar";
+import Hero from "./components/Hero/Hero"
+import Schedule from "./components/Schedule/Schedule"
+import FAQ from "./components/FAQ/FAQ"
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div>
-      <Text>Hello</Text>
-    </div>
-  )
+    <>
+      <Navbar/>
+      <main>
+        <h1>Jāņi 2026</h1>
+      </main>
+      <Hero />
+      <Schedule />
+      <FAQ />
+    </>
+  );
 }
 
-export default App
+export default App;
