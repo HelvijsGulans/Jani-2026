@@ -52,9 +52,6 @@
     padding-top: 80px;
   }
 
-  .app__navbar_list {
-    display: none;
-  }
 }
 
 @media screen and (max-width: 650px) {
@@ -66,13 +63,23 @@
     text-align: center;
   }
 
-  .app__navbar_list {
-    display: none;
-  }
 
   .app__navbar_title {
     font-size: 37px;
     text-align: center;
     margin-left: 0px;
   }
+}
+
+.nav-menu {
+  display: none;
+}
+
+.nav-menu.open {
+  display: block;
+}
+
+.nav-menu.open .app__navbar_list {
+  display: flex;
+  flex-direction: column;
 }

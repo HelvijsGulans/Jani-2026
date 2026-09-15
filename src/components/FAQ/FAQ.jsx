@@ -1,10 +1,7 @@
 import { useState } from "react";
-import React from "react";
 import "./FAQ.css";
 
-import faq from "../../data/faq"
-
-export default function FAQ() {
+export default function FAQ({ text }) {
   const [selected, setSelected] = useState(null);
 
   const toggle = (i) => {
@@ -15,26 +12,32 @@ export default function FAQ() {
     setSelected(i);
   };
 
-  const data = faq
-
   return (
-    <div className="app__FAQ" id="faq">
-      <text className="app__FAQ_title">Biežāk uzdotie jautājumi</text>
-      {data.map((item, i) => (
-        <div key={item.question} className="item" onClick={() => toggle(i)}>
+    <section className="app__FAQ" id="faq">
+      <h2 className="app__FAQ_title">{text.title}</h2>
+
+      {text.items.map((item, i) => (
+        <div
+          key={item.question}
+          className="item"
+          onClick={() => toggle(i)}
+        >
           <div className="question">
             <h3>{item.question}</h3>
-            <span className="plus">{selected === i ? "-" : "+"}</span>
+            <span className="plus">
+              {selected === i ? "-" : "+"}
+            </span>
           </div>
+
           <div className={selected === i ? "answer show" : "answer"}>
             {item.answer}
           </div>
         </div>
       ))}
-      <h3 className="app__FAQ_extraQ">
-        Ir kāds jautājums? Sūti šurp, es atbildēšu!
-      </h3>
 
-    </div>
+      <h3 className="app__FAQ_extraQ">
+        {text.extraQuestion}
+      </h3>
+    </section>
   );
-};
+}

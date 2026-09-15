@@ -1,8 +1,7 @@
-import React from "react";
 import "./Hero.css";
 import heroImage from "./LaukuUpscaled.jpg"
 
-export default function Hero(){
+export default function Hero({text}){
   return (
     <div className="app__hello" href="#hello">
       <div className="app__hello_main">
@@ -12,15 +11,15 @@ export default function Hero(){
           alt="Latvian Countryside"
         />
         <div className="app__hello_container">
-          <h3 className="app__hello_title">Sveiks!</h3>
+          <h3 className="app__hello_title">{text.title}</h3>
 
           <div className="app__hello_card">
-            <p>Dear friends and family!</p>
+            <p>{text.greeting}</p>
             <p>
-              Celebrate the longest day of the year with food, music, bonfires and Latvian midsummer traditions.
+              {text.description}
             </p>
-            <p>23 June 2026</p>
-            <p>Latvia</p>
+            <p>{text.date}</p>
+            <p>{text.location}</p>
           </div>
         </div>
       </div>
