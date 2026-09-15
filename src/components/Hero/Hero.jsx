@@ -11,8 +11,7 @@ export default function Hero({text}){
           alt="Latvian Countryside"
         />
         <div className="app__hello_container">
-          <h3 className="app__hello_title">{text.title}</h3>
-
+          <h1 className="app__hello_title">{text.title}</h1>
           <div className="app__hello_card">
             <p>{text.greeting}</p>
             <p>

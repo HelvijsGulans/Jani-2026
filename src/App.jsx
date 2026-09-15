@@ -26,13 +26,13 @@ function App() {
 
   return (
     <>
+     <div  id="top"/>
       <Navbar
         language={language}
         setLanguage={setLanguage}
         text={text.nav}
         />
       <main>
-        <h1>Jāņi 2026</h1>
         <Hero text={text.hero}/>
         <Schedule text={text.schedule} />
         <FAQ text={text.faq}/>

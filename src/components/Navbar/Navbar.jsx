@@ -10,12 +10,13 @@ export default function Navbar({
 
   return (
     <nav className="app__navbar">
-        <p className="app__navbar_title">Jāņi '26</p>
+        <a className="app__navbar_title" href="#top">Jāņi '26</a>
 
-        <div className="navbar-actions">
+        <div className="navbar-actions" >
             <div className="language-switcher">
             <button
                 type="button"
+                aria-pressed={language === "en"}
                 onClick={() => setLanguage("en")}
             >
                 EN
@@ -23,6 +24,7 @@ export default function Navbar({
 
             <button
                 type="button"
+                aria-pressed={language === "lv"}
                 onClick={() => setLanguage("lv")}
             >
                 LV

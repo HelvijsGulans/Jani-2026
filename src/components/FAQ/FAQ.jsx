@@ -30,7 +30,9 @@ export default function FAQ({ text }) {
           </div>
 
           <div className={selected === i ? "answer show" : "answer"}>
-            {item.answer}
+            <div className="answer-inner">
+              {item.answer}
+            </div>
           </div>
         </div>
       ))}

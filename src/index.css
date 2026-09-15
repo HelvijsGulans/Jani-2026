@@ -4,9 +4,20 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 4.5rem;
 }
 
 body {
   margin: 0;
   font-family: Arial, sans-serif;
+}
+:root {
+  --forest-950: #1f2f1d;
+  --forest-900: #2e4322;
+  --forest-800: #3f5a34;
+  --forest-700: #58704b;
+
+  --cream: #f6f0e4;
+  --paper: #fffdf8;
+  --gold: #c89a46;
 }

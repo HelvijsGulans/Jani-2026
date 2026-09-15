@@ -1,85 +1,98 @@
-@font-face {
-  font-family: Carelia;
-  src: url(./Carelia-Upright.ttf);
-}
-
-.app__plan {
-  height: 110vh;
+.app__schedule {
   width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  background: linear-gradient(
-    to bottom,
-    #2e4322 0%,
-    #2e4322 20%,
-    white 20%,
-    white 100%
-  );
-  background-image: url(./leaf\ background\ upscaled.jpg);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: cover;
+  padding: 7rem 1.25rem;
+  background: var(--cream);
 }
 
-.app__plan_container {
-  text-align: left;
-  display: flex;
-  flex-direction: row;
+.app__schedule_title {
+  width: min(100%, 52rem);
+  margin: 0 auto 2.5rem;
+
+  color: var(--forest-900);
+  font-family: var(--font-display);
+  font-size: clamp(2.8rem, 6vw, 4.5rem);
+  line-height: 1;
+  letter-spacing: -0.035em;
 }
 
-.app__plan_seciba {
-  font-family: carelia;
-  font-size: 25px;
-}
+.app__schedule_list {
+  width: min(100%, 52rem);
+  margin: 0 auto;
+  padding: 1.25rem 2rem;
 
-.app__plan_list_one,
-.app__plan_list_two {
-  display: flex;
-  flex-direction: column;
-  align-items: left;
-  justify-content: right;
+  background: var(--paper);
+  border: 1px solid rgba(46, 67, 34, 0.14);
+  border-left: 5px solid var(--forest-900);
+  border-radius: 1.25rem;
+
+  box-shadow: 0 14px 35px rgba(31, 47, 29, 0.08);
+
   list-style: none;
-  font-family: Carelia;
-  font-size: 22px;
 }
 
-.app__plan_title {
-  font-family: candace;
-  margin-top: 5rem;
-  font-size: 45px;
+.app__schedule_list li {
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 6rem 1fr;
+  gap: 1.4rem;
+
+  align-items: baseline;
+
+  padding: 1.35rem 0.5rem 1.35rem 1.1rem;
 }
 
-@media screen and (max-width: 1150px) {
-  .app__plan {
-    height: 50rem;
-  }
+.app__schedule_list li + li {
+  border-top: 1px solid rgba(46, 67, 34, 0.1);
 }
 
-@media screen and (max-width: 650px) {
-  .app__plan {
-    margin-top: 1rem;
-    height: 60rem;
-    width: 100%;
-    background-color: white;
-    background-image: none;
-  }
+.app__schedule_list li::before {
+  content: "";
 
-  .app__plan_container {
-    flex-direction: column;
-  }
+  position: absolute;
+  top: 1.85rem;
+  left: 0;
 
-  .app__plan_seciba {
-    margin-top: -2rem;
-    font-size: 12px;
-  }
+  width: 0.45rem;
+  height: 0.45rem;
+
+  background: var(--gold);
+  border-radius: 50%;
+
+  box-shadow: 0 0 0 4px rgba(200, 154, 70, 0.13);
 }
 
-@media screen and (max-width: 450px) {
-  .app__plan_seciba {
-    padding: 2rem;
-    margin-top: -3rem;
-    margin-bottom: 1rem;
+.app__schedule_list time {
+  color: var(--gold);
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+
+.app__schedule_list span {
+  color: var(--forest-950);
+
+  font-family: var(--font-display);
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+  font-weight: 700;
+}
+
+@media (max-width: 560px) {
+  .app__schedule {
+    padding: 5rem 1rem;
+  }
+
+  .app__schedule_title {
+    margin-bottom: 1.75rem;
+  }
+
+  .app__schedule_list {
+    padding: 0.75rem 1rem;
+  }
+
+  .app__schedule_list li {
+    grid-template-columns: 4.5rem 1fr;
+    gap: 0.8rem;
+
+    padding: 1.15rem 0.25rem 1.15rem 0.9rem;
   }
 }

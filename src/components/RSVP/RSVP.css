@@ -1,6 +1,141 @@
+.app__rsvp {
+  width: min(calc(100% - 2rem), 44rem);
+  margin: 0 auto 7rem;
+  padding: clamp(1.5rem, 5vw, 3rem);
+  background: var(--paper);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.app__rsvp h2 {
+  margin: 0 0 2rem;
+  color: var(--forest-950);
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  line-height: 1;
+  letter-spacing: -0.035em;
+}
+
 .form-field {
-    display: flex;
-    flex-direction: column;
-    gap: 0.4rem;
-    margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.45rem;
+  margin-bottom: 1.15rem;
+}
+
+.form-field label {
+  color: var(--forest-900);
+  font-size: 0.9rem;
+  font-weight: 750;
+}
+
+.form-field input:not([type="checkbox"]),
+.form-field textarea {
+  width: 100%;
+  border: 1px solid rgba(46, 67, 34, 0.2);
+  border-radius: 0.8rem;
+  background: #fff;
+  color: var(--ink);
+  outline: none;
+  transition: border-color 160ms ease, box-shadow 160ms ease, background-color 160ms ease;
+}
+
+.form-field input:not([type="checkbox"]) {
+  min-height: 3rem;
+  padding: 0 0.9rem;
+}
+
+.form-field textarea {
+  min-height: 7rem;
+  padding: 0.8rem 0.9rem;
+  resize: vertical;
+}
+
+.form-field input:not([type="checkbox"]):focus,
+.form-field textarea:focus {
+  border-color: var(--gold);
+  box-shadow: 0 0 0 4px rgba(200, 154, 70, 0.14);
+}
+
+.form-field:has(input[type="checkbox"]) {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.8rem 0;
+}
+
+.form-field input[type="checkbox"] {
+  width: 1.3rem;
+  height: 1.3rem;
+  margin: 0;
+  accent-color: var(--forest-800);
+  cursor: pointer;
+}
+
+.form-error {
+  margin: 0.1rem 0 0;
+  color: #9f3f34;
+  font-size: 0.82rem;
+  font-weight: 650;
+}
+
+.app__rsvp > button[type="submit"] {
+  width: 100%;
+  min-height: 3.2rem;
+  margin-top: 0.4rem;
+  border: 0;
+  border-radius: 999px;
+  background: var(--forest-800);
+  color: var(--paper);
+  cursor: pointer;
+  font-weight: 800;
+  transition: background-color 160ms ease, transform 160ms ease, box-shadow 160ms ease;
+}
+
+.app__rsvp > button[type="submit"]:hover {
+  background: var(--forest-900);
+  box-shadow: 0 10px 24px rgba(23, 33, 22, 0.18);
+  transform: translateY(-1px);
+}
+
+.app__rsvp > button[type="submit"]:focus-visible {
+  outline: 3px solid rgba(200, 154, 70, 0.5);
+  outline-offset: 3px;
+}
+
+.app__rsvp > p:last-child {
+  margin: 1rem 0 0;
+  color: var(--forest-700);
+  font-size: 0.9rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.app__rsvp_section {
+  width: 100%;
+  padding: 7rem 1rem;
+  background: var(--forest-950);
+}
+
+.app__rsvp {
+  width: min(100%, 44rem);
+  margin: 0 auto;
+  padding: clamp(1.5rem, 5vw, 3rem);
+
+  background: var(--paper);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: var(--radius-lg);
+
+  box-shadow:
+    0 24px 70px rgba(0, 0, 0, 0.22);
+}
+
+@media (max-width: 600px) {
+  .app__rsvp {
+    margin-bottom: 4.5rem;
+    padding: 1.35rem;
+    border-radius: 1.2rem;
   }
+}

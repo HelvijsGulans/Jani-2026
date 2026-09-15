@@ -62,71 +62,75 @@ export default function RSVP({text}) {
     
 
   return (
-    <form onSubmit={handleSubmit}>
-        <div className="form-field">
-            <label htmlFor="name">{text.name}</label>
+    <section className="app__rsvp_section" id="rsvp">
+        <form id="rsvp" className="app__rsvp" onSubmit={handleSubmit}>
+            <h2>{text.title}</h2>
+            <div className="form-field">
+                
+                <label htmlFor="name">{text.name}</label>
 
-            <input
-            id="name"
-            value={name}
-            onChange={(event) => setName(event.target.value)}
-            />
+                <input
+                id="name"
+                value={name}
+                onChange={(event) => setName(event.target.value)}
+                />
 
-            {errors.name && (
-            <p className="form-error">{errors.name}</p>
-            )}
-        </div>
+                {errors.name && (
+                <p className="form-error">{errors.name}</p>
+                )}
+            </div>
 
-        <div className="form-field">
-            <label htmlFor="guests">{text.guests}</label>
+            <div className="form-field">
+                <label htmlFor="guests">{text.guests}</label>
 
-            <input
-            id="guests"
-            type="number"
-            min="0"
-            value={guests}
-            onChange={(event) =>
-                setGuests(Number(event.target.value))
-            }
-            />
+                <input
+                id="guests"
+                type="number"
+                min="0"
+                value={guests}
+                onChange={(event) =>
+                    setGuests(Number(event.target.value))
+                }
+                />
 
-            {errors.guests && (
-            <p className="form-error">{errors.guests}</p>
-            )}
-        </div>
+                {errors.guests && (
+                <p className="form-error">{errors.guests}</p>
+                )}
+            </div>
 
-        <div className="form-field">
-            <label htmlFor="dietaryNotes">
-            {text.dietaryNotes}
-            </label>
+            <div className="form-field">
+                <label htmlFor="dietaryNotes">
+                {text.dietaryNotes}
+                </label>
 
-            <textarea
-            id="dietaryNotes"
-            value={dietaryNotes}
-            onChange={(event) =>
-                setDietaryNotes(event.target.value)
-            }
-            />
-        </div>
+                <textarea
+                id="dietaryNotes"
+                value={dietaryNotes}
+                onChange={(event) =>
+                    setDietaryNotes(event.target.value)
+                }
+                />
+            </div>
 
-        <div className="form-field">
-            <label htmlFor="stayUntilSunrise">
-            {text.stayUntilSunrise}
-            </label>
+            <div className="form-field">
+                <label htmlFor="stayUntilSunrise">
+                {text.stayUntilSunrise}
+                </label>
 
-            <input
-            id="stayUntilSunrise"
-            type="checkbox"
-            checked={stayUntilSunrise}
-            onChange={(event) =>
-                setStayUntilSunrise(event.target.checked)
-            }
-            />
-        </div>
+                <input
+                id="stayUntilSunrise"
+                type="checkbox"
+                checked={stayUntilSunrise}
+                onChange={(event) =>
+                    setStayUntilSunrise(event.target.checked)
+                }
+                />
+            </div>
 
-        <button type="submit">{text.submit}</button>
+            <button type="submit">{text.submit}</button>
 
-        {submitted && <p>{text.success}</p>}
-    </form>
+            {submitted && <p>{text.success}</p>}
+        </form>
+    </section>
   )
 }

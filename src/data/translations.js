@@ -4,13 +4,14 @@ const translations = {
       schedule: "Schedule",
       faq: "FAQ",
       eventInfo: "Event Info",
+      rsvp: "RSVP"
     },
 
     hero: {
       title: "Jāņi 2026",
       greeting: "Dear friends and family!",
       description:
-        "Celebrate the longest days of the year with food, music, bonfires and Latvian midsummer traditions.",
+        "Celebrate the longest day of the year with food, music, bonfires and Latvian midsummer traditions.",
       date: "23 June 2026",
       location: "Latvia",
     },
@@ -97,6 +98,7 @@ const translations = {
       schedule: "Dienas plāns",
       faq: "BUJ",
       eventInfo: "Informācija",
+      rsvp: "RSVP"
     },
 
     hero: {
