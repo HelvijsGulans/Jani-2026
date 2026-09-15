@@ -1,29 +1,34 @@
-import { useEffect, useState } from "react"
-import "./RSVP.css"
+import { useState } from "react";
+import "./RSVP.css";
 
+function loadSavedRsvp() {
+    const savedRsvp = localStorage.getItem("jani-2026-rsvp");
 
-export default function RSVP({text}) {
+    if (!savedRsvp) {
+        return null;
+    }
 
-    const[name, setName] = useState("");
-    const[guests, setGuests] = useState(0)
-    const[dietaryNotes, setDietaryNotes] = useState("")
-    const[stayUntilSunrise, setStayUntilSunrise] = useState(false)
-    const[errors, setErrors] = useState({})
-    const[submitted, setSubmitted] = useState(false)
+    try {
+        return JSON.parse(savedRsvp);
+    } catch {
+        return null;
+    }
+}
 
-    useEffect(() => {
-        const savedRsvp = localStorage.getItem("jani-2026-rsvp");
+export default function RSVP({ text }) {
+    const [savedRsvp] = useState(loadSavedRsvp);
 
-        if (savedRsvp) {
-            const parsedRsvp = JSON.parse(savedRsvp);
+    const [name, setName] = useState(savedRsvp?.name ?? "");
+    const [guests, setGuests] = useState(savedRsvp?.guests ?? 0);
+    const [dietaryNotes, setDietaryNotes] = useState(
+        savedRsvp?.dietaryNotes ?? ""
+    );
+    const [stayUntilSunrise, setStayUntilSunrise] = useState(
+        savedRsvp?.stayUntilSunrise ?? false
+    );
 
-            setName(parsedRsvp.name);
-            setGuests(parsedRsvp.guests);
-            setDietaryNotes(parsedRsvp.dietaryNotes);
-            setStayUntilSunrise(parsedRsvp.stayUntilSunrise);
-        }
-    }, []);
-    
+    const [errors, setErrors] = useState({});
+    const [submitted, setSubmitted] = useState(false);    
 
     const handleSubmit = (event) => {
         event.preventDefault();

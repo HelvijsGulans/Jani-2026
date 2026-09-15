@@ -37,9 +37,6 @@ export default function FAQ({ text }) {
         </div>
       ))}
 
-      <h3 className="app__FAQ_extraQ">
-        {text.extraQuestion}
-      </h3>
     </section>
   );
 }
